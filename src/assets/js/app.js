@@ -16,9 +16,9 @@ window.scrollBy({
 });
 
 // Scroll to a certain element
-// document.querySelector(".section").scrollIntoView({
-//   behavior: "smooth"
-// });
+document.querySelector("section").scrollIntoView({
+  behavior: "smooth"
+});
 
 // Slick -------------->
 $(".responsive-slick").slick({

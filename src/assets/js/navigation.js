@@ -1,7 +1,6 @@
 const pageHeader = document.querySelector(".page-header");
 const openMobMenu = document.querySelector(".open-mobile-menu");
 const closeMobMenu = document.querySelector(".close-mobile-menu");
-const toggleSearchForm = document.querySelector(".search");
 const searchForm = document.querySelector(".page-header form");
 const topMenuWrapper = document.querySelector(".top-menu-wrapper");
 const isVisible = "is-visible";
@@ -15,10 +14,6 @@ openMobMenu.addEventListener("click", () => {
 
 closeMobMenu.addEventListener("click", () => {
   topMenuWrapper.classList.remove(showOffCanvas);
-});
-
-toggleSearchForm.addEventListener("click", () => {
-  searchForm.classList.toggle(isVisible);
 });
 
 window.addEventListener("resize", () => {

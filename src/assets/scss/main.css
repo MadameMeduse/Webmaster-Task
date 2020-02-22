@@ -33,7 +33,7 @@ a:hover {
 }
 
 .header__content {
-  height: 50vh;
+  height: 100%;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,12 +49,15 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 5vh 0;
 }
 
 @media (min-width: 1200px) {
   .header__content {
     height: 100vh;
     position: relative;
+    margin-top: 0;
+    padding: 0;
   }
 }
 
@@ -65,7 +68,6 @@ a:hover {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
-  display: none;
 }
 
 @media (min-width: 992px) {
@@ -73,6 +75,7 @@ a:hover {
     display: block;
     left: 431px;
     top: 257px;
+    margin-top: 2em;
   }
 }
 
@@ -94,6 +97,7 @@ a:hover {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #ffffff;
+    margin: 0;
   }
 }
 
@@ -137,5 +141,57 @@ a:hover {
     top: 545px;
     position: absolute;
   }
+}
+
+.features {
+  height: 50vh;
+  color: #101010;
+  background: #fafafa;
+}
+
+@media (min-width: 1200px) {
+  .features {
+    height: 660px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.features .feature__item {
+  width: 293px;
+  height: 198px;
+  margin: auto;
+  text-align: center;
+  padding: 32px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.features .feature__item h2 {
+  font-size: 18px;
+  text-align: center;
+  margin: 63px 0;
+}
+
+.features .feature__item p {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.features .feature__item a {
+  color: #ed4c5c;
+  font-weight: bold;
+  font-size: 12px;
 }
 /*# sourceMappingURL=main.css.map */
