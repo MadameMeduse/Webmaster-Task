@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,900&display=swap&subset=latin-ext");
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.header__content {
+  height: 50vh;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .header__content {
+    height: 100vh;
+    position: relative;
+  }
+}
+
+.header__content h1 {
+  font-weight: bold;
+  font-size: 5vmin;
+  line-height: 6vmin;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .header__content h1 {
+    display: block;
+    left: 431px;
+    top: 257px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__content h1 {
+    position: absolute;
+    width: 578px;
+    height: 86px;
+    left: 431px;
+    top: 257px;
+    font-size: 72px;
+    line-height: 86px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+}
+
+.header__content p {
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  font-weight: 600;
+  margin: 39px;
+}
+
+@media (min-width: 1200px) {
+  .header__content p {
+    width: 540px;
+    height: 124px;
+    left: 450px;
+    top: 382px;
+    font-size: 24px;
+    position: absolute;
+    margin: 0;
+  }
+}
+
+.header__content button {
+  text-align: center;
+  text-transform: uppercase;
+  width: 160px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ed4c5c;
+  line-height: 150%;
+}
+
+@media (min-width: 1200px) {
+  .header__content button {
+    left: 640px;
+    top: 545px;
+    position: absolute;
+  }
+}
+/*# sourceMappingURL=main.css.map */

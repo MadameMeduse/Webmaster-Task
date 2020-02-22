@@ -3,13 +3,12 @@
 @import "main.scss";
 
 :root {
-  --purple-1: #3d174f;
-  --purple-2: #4b2860;
-  --white: #fff;
-  --black: #221f1f;
-  --red: #ed1849;
-  --lightgray: #cfcfcf;
-  --overlay: rgba(0, 0, 0, 0.5);
+  --linearBackground: linear-gradient(
+    90deg,
+    rgba(213, 32, 71, 0.8) 0%,
+    rgba(238, 61, 27, 0.8) 100%
+  );
+  --elementShadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
 }
 
 * {
@@ -33,10 +32,6 @@ ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -54,7 +49,7 @@ button {
 
 body {
   font: 1.6rem/1.5 "Lato", sans-serif;
-  color: var(--white);
+  color: $white;
   min-height: 100vh;
 }
 
@@ -63,184 +58,213 @@ body {
 header {
   position: fixed;
   width: 100vw;
-  top: 1em;
-  color: $black;
+  height: 50vh;
+  color: $white;
   z-index: 10000;
+  background-image: url(../img/Rectangle3-min.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
+
+  @include respond-to("lg") {
+    height: 100vh;
+  }
+
+  &::after {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(213, 32, 71, 0.8) 0%,
+      rgba(238, 61, 27, 0.8) 100%
+    );
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 .page-header {
-  position: relative;
   padding: 1rem;
-  background: var(--white);
-  box-shadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
-}
+  background: transparent;
+  position: absolute;
+  width: 100vw;
 
-.page-header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.page-header .horizontal-logo,
-.page-header .search span {
-  display: none;
-  max-width: 50px;
-  margin: 0 1em;
-}
-.signature-logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu {
-  display: none;
-  margin-left: auto;
-
-  li {
-    padding: 0 1em;
+  @include respond-to("md") {
+    padding: 0 116px;
+    height: 100px;
+    top: 17px;
   }
-}
 
-.page-header .vertical-logo {
-  max-width: 3.5rem;
-  margin: 0 0.5em;
-}
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3vmin;
+    position: relative;
+    width: 100%;
+  }
 
-.page-header .top-menu-wrapper {
-  color: var(--black);
-}
+  .horizontal-logo,
+  .page-header {
+    margin: 0 1em;
+  }
 
-.page-header .top-menu-wrapper::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: background 0.5s;
-}
+  .icon-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.page-header .search {
-  color: var(--black);
-}
+  .menu {
+    display: none;
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
 
-.page-header .panel,
-.page-header .top-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  transform: translate3d(-100%, 0, 0);
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  z-index: 146;
-}
+    li {
+      padding: 0 1em;
+    }
+  }
 
-.page-header .panel1 {
-  width: 100%;
-  background: $yellow;
-  transition-delay: 0.3s;
-  z-index: 100;
-}
+  .top-menu-wrapper {
+    color: $black;
 
-.page-header .panel2 {
-  width: calc(100% - 3rem);
-  background: $pink;
-  transition-delay: 0.1s;
-  z-index: 100;
-}
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transition: background 0.5s;
+    }
+  }
 
-.page-header .top-menu {
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 6rem);
-  overflow-y: auto;
-  padding: 2rem;
-  background: var(--white);
-}
+  .panel,
+  .top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 146;
+  }
 
-.page-header .top-menu-wrapper.show-offcanvas::before {
-  background: var(--overlay);
-  z-index: 1;
-}
+  .panel1 {
+    width: 100%;
+    background: $lightRed;
+    transition-delay: 0.3s;
+    z-index: 100;
+  }
 
-.page-header .top-menu-wrapper.show-offcanvas .panel,
-.page-header .top-menu-wrapper.show-offcanvas .top-menu {
-  transform: translate3d(0, 0, 0);
-  transition-duration: 0.7s;
-}
+  .panel2 {
+    width: calc(100% - 3rem);
+    background: $darkRed;
+    transition-delay: 0.1s;
+    z-index: 100;
+  }
 
-.page-header .top-menu-wrapper.show-offcanvas .panel1 {
-  transition-delay: 0s;
-}
+  .top-menu {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 6rem);
+    overflow-y: auto;
+    padding: 2rem;
+    color: $white;
 
-.page-header .top-menu-wrapper.show-offcanvas .panel2 {
-  transition-delay: 0.2s;
-}
+    a {
+      font-size: 20px;
+    }
+  }
 
-.page-header .top-menu-wrapper.show-offcanvas .top-menu {
-  transition-delay: 0.4s;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 0 4rem 0.5rem;
-}
+  .top-menu-wrapper.show-offcanvas {
+    &::before {
+      background: var(--overlay);
+      z-index: 1;
+    }
+    .panel,
+    .top-menu {
+      transform: translate3d(0, 0, 0);
+      transition-duration: 0.7s;
+    }
+    .panel1 {
+      transition-delay: 0s;
+    }
+    .panel2 {
+      transition-delay: 0.2s;
+      box-shadow: var(--elementShadow);
+    }
+    .top-menu {
+      transition-delay: 0.4s;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 0 4rem 0.5rem;
+    }
+  }
 
-/* TOP MENU
+  /* TOP MENU
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page-header .top-menu li + li {
-  margin-top: 1.5rem;
-}
-
-.page-header .top-menu > li:last-child {
-  margin-top: auto;
-}
-
-.page-header ul a {
-  display: inline-block;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  transition: color 0.35s ease-out;
-}
-
-.page-header ul a:hover {
-  color: var(--red);
-}
-
-.page-header .has-dropdown i {
-  display: none;
-}
-
-.page-header .sub-menu {
-  padding: 1.5rem 2rem 0;
-}
-
-.page-header .top-menu .mob-block {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-  img {
-    max-width: 50px;
+  .top-menu li + li {
+    margin-top: 1.5rem;
   }
-}
 
-.page-header .top-menu .mob-block i {
-  color: var(--lightgray);
-}
+  .top-menu > li:last-child {
+    margin-top: auto;
 
-.page-header .socials {
-  display: flex;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
+    ul a {
+      display: inline-block;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      transition: color 0.35s ease-out;
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
+  .sub-menu {
+    padding: 1.5rem 2rem 0;
+  }
 
-.page-header .socials li + li {
-  margin-top: 0;
-}
+  .top-menu .mob-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    img {
+      max-width: 150px;
+    }
+    i {
+      color: $white;
+      font-size: 2em;
+    }
+  }
 
-.page-header .socials .fa-stack {
-  font-size: 1.7rem;
-}
+  .socials {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 
-.page-header .socials .fab {
-  font-size: 1.2rem;
+    li + li {
+      margin-top: 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .fa-stack {
+      font-size: 1.7rem;
+      color: $lightRed;
+      .fab {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
