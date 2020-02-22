@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,900&display=swap&subset=latin-ext");
+
+@mixin sectionBg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  padding: 100px 0;
+}
+
+$red: #ee3d1b;
+$darkRed: #d52047;
+$black: #000000;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.page-wrapper {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  color: #000;
+  font-family: "Lato", sans-serif;
+}
