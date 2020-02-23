@@ -91,9 +91,7 @@ header {
   position: absolute;
   width: 100vw;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flexBetween;
 
   @include respond-to("md") {
     padding: 0 116px;
@@ -101,13 +99,18 @@ header {
     top: 17px;
   }
 
+  @include respond-to("lg") {
+    padding: 0 160px;
+  }
+
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 3vmin;
+    font-size: 14px;
     position: relative;
     width: 100%;
+    text-transform: uppercase;
   }
 
   .horizontal-logo,
@@ -183,7 +186,7 @@ header {
     color: $white;
 
     a {
-      font-size: 20px;
+      font-size: 14px;
     }
   }
 
