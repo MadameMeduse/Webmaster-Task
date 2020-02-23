@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="src/assets/slick/slick-theme.css" />
     <link rel="stylesheet" href="src/assets/scss/header.css" />
     <link rel="stylesheet" href="src/assets/scss/nav-responsive.css" />
+    <link rel="stylesheet" href="src/assets/scss/form.css" />
   </head>
 
   <body>
@@ -283,6 +284,57 @@
         </div>
 
       </section>
+      <section id="contact">
+          <div class="contact-section">
+            <div class="contact-section__content">
+              <h1>Contact</h1>
+              <p>
+                  Questions or concerns? Just fill out the form below and our support team will get back to you within 24 hours
+              </p>
+              
+            </div>
+           <div class="contact-section__form">
+              <form action="" method="post">
+                  <div class="form__name">
+                      <input
+                      id="name"
+                      name="name"
+                      placeholder="First name"
+                      type="text"
+                      maxlength="32"
+                      required
+                    />
+                    <input
+                    id="surname"
+                    name="name"
+                    placeholder="Last name"
+                    type="text"
+                    maxlength="32"
+                    required
+                  />
+                  </div>
+  
+                  <input
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone Number"
+                    type="number"
+                    pattern="[0-9]{12}"
+                    required
+                  />
+                  <select id="service" name="service" form="">
+                      <option value="volvo">Service</option>
+                      <option value="saab">Service</option>
+                      <option value="opel">Service</option>
+                      <option value="audi">Service</option>
+                    </select>
+                  <button id="mail-submit" class="link-button">Sumbmit now</button>
+                </form>
+             
+           </div>
+          </div>
+  
+        </section>
     </main>
     <footer></footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

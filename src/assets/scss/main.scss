@@ -297,8 +297,13 @@ p {
   }
 }
 
-.red-section {
+//Red Section & Contact Section
+#red {
   background: $linkRed;
+  color: $white;
+}
+.red-section,
+.contact-section {
   padding: 5vw;
 
   @include respond-to("md") {
@@ -307,11 +312,14 @@ p {
   }
 
   @include respond-to("lg") {
-    padding: 0 156px;
+    padding: 65px 156px;
+    max-height: 500px;
   }
 }
 .red-section__content,
-.red-section__slider {
+.red-section__slider,
+.contact-section__content,
+.contact-section__form {
   @include respond-to("md") {
     width: 50%;
   }
@@ -332,5 +340,12 @@ p {
     @include respond-to("md") {
       width: 445px;
     }
+  }
+}
+
+.contact-section {
+  color: $lightBlack;
+  @include respond-to("lg") {
+    padding-bottom: 78px;
   }
 }

@@ -57,7 +57,7 @@ $(".center").slick({
   centerPadding: "-30px",
   slidesToShow: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 1900,
   arrows: false
 });
 
