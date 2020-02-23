@@ -296,3 +296,41 @@ p {
     }
   }
 }
+
+.red-section {
+  background: $linkRed;
+  padding: 5vw;
+
+  @include respond-to("md") {
+    @include flexCenter();
+    align-items: flex-start;
+  }
+
+  @include respond-to("lg") {
+    padding: 0 156px;
+  }
+}
+.red-section__content,
+.red-section__slider {
+  @include respond-to("md") {
+    width: 50%;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    @include respond-to("lg") {
+      margin-top: 24px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+    margin: 24px 0;
+    @include respond-to("md") {
+      width: 445px;
+    }
+  }
+}
