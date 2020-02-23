@@ -32,9 +32,14 @@ a:hover {
 }
 
 h2 {
-  padding: 63px 0;
+  padding: 5vw 0;
   color: black;
   text-align: center;
+}
+@media (min-width: 1200px) {
+  h2 {
+    padding: 63px 0;
+  }
 }
 
 h3 {
@@ -74,6 +79,7 @@ p {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
+  display: none;
 }
 @media (min-width: 992px) {
   .header__content h1 {
@@ -117,6 +123,9 @@ p {
     position: absolute;
     margin: 0;
   }
+}
+.header__content a {
+  margin-bottom: 4vw;
 }
 .header__content button {
   text-align: center;
@@ -207,7 +216,7 @@ p {
   text-align: center;
   width: 50vw;
   padding: 3vw;
-  height: 290px;
+  height: 220px;
   position: relative;
   flex-direction: column;
   display: flex;
@@ -217,6 +226,7 @@ p {
 @media (min-width: 992px) {
   .technology .technology__item {
     width: 255px;
+    height: 290px;
     padding: 30px;
     justify-content: space-between;
   }
@@ -243,11 +253,11 @@ p {
 }
 .technology .technology__item .technology__item--content {
   margin-top: 19px;
-  padding: 0 34px 4px;
+  max-width: 191px;
 }
 @media (min-width: 992px) {
   .technology .technology__item .technology__item--content {
-    padding: 0;
+    padding: 0 34px 4px;
   }
 }
 

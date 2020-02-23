@@ -9,6 +9,8 @@ $(".responsive-slick").slick({
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1900,
   responsive: [
     {
       breakpoint: 1024,
@@ -18,7 +20,7 @@ $(".responsive-slick").slick({
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1
       }
     },
