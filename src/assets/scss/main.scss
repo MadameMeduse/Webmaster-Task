@@ -321,7 +321,7 @@ p {
 .red-section__slider,
 .contact-section__content,
 .contact-section__form {
-  padding: 5vw;
+  padding: 2vw;
   @include respond-to("md") {
     width: 50%;
   }

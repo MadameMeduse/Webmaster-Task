@@ -1,9 +1,13 @@
 @import "main.scss";
 
 form {
+  @include respond-to("lg") {
+    width: 540px;
+    height: 305px;
+  }
   .form__name {
-    display: unset !important;
-    @include respont-to("md") {
+    display: block;
+    @include respond-to("md") {
       @include flexBetween;
     }
     input {
@@ -22,8 +26,8 @@ form {
     font-size: 16px;
     line-height: 19px;
     color: rgba(19, 39, 67, 0.5);
-
-    @include respont-to("md") {
+    margin: 10px 0;
+    @include respond-to("md") {
       margin: 23px 0;
       padding: 20px 30px;
 
@@ -42,5 +46,11 @@ form {
     text-transform: uppercase;
     color: $white;
     font-size: 14px;
+    margin: 2vw auto;
+    @include flexCenter;
+
+    @include respond-to("md") {
+      margin: 0;
+    }
   }
 }
