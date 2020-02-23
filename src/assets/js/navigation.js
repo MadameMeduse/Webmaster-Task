@@ -1,8 +1,8 @@
 const pageHeader = document.querySelector(".page-header");
 const openMobMenu = document.querySelector(".open-mobile-menu");
 const closeMobMenu = document.querySelector(".close-mobile-menu");
-const searchForm = document.querySelector(".page-header form");
 const topMenuWrapper = document.querySelector(".top-menu-wrapper");
+const mobMenuLink = topMenuWrapper.getElementsByTagName("ul.top-menu > li");
 const isVisible = "is-visible";
 const showOffCanvas = "show-offcanvas";
 const noTransition = "no-transition";
@@ -13,6 +13,10 @@ openMobMenu.addEventListener("click", () => {
 });
 
 closeMobMenu.addEventListener("click", () => {
+  topMenuWrapper.classList.remove(showOffCanvas);
+});
+
+mobMenuLink.addEventListener("click", () => {
   topMenuWrapper.classList.remove(showOffCanvas);
 });
 

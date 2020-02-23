@@ -201,6 +201,7 @@ p {
   color: $lightBlack;
   padding-bottom: 10vh;
   margin: 0 auto;
+  flex-wrap: wrap;
 
   @include respond-to("lg") {
     padding-bottom: 124px;
@@ -248,15 +249,50 @@ p {
 
 .technology {
   color: $lightBlack;
-  @include flexBetween();
+  @include flexBetween;
 
   .technology__item {
-    padding: 30px;
-    width: 255px;
     text-align: center;
+    width: 50vw;
+    padding: 3vw;
+    height: 290px;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include respond-to("md") {
+      width: 255px;
+      padding: 30px;
+      justify-content: space-between;
+    }
 
-    img {
-      margin: 0 auto;
+    .technology__item--image {
+      @include flexCenter;
+      flex-direction: column;
+      :nth-child(2) {
+        position: absolute;
+        top: 20%;
+        width: 12%;
+
+        @include respond-to("md") {
+          top: 26%;
+          width: unset;
+        }
+      }
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    .technology__item--content {
+      margin-top: 19px;
+      padding: 0 34px 4px;
+
+      @include respond-to("md") {
+        padding: 0;
+      }
     }
   }
 }
