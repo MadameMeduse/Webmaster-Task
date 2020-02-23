@@ -53,6 +53,10 @@ body {
   min-height: 100vh;
 }
 
+.active {
+  font-weight: bolder;
+}
+
 /* HEADER
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
@@ -187,6 +191,10 @@ header {
 
     a {
       font-size: 14px;
+
+      &:hover {
+        color: $lightBlack;
+      }
     }
   }
 
@@ -228,7 +236,7 @@ header {
       text-transform: uppercase;
       transition: color 0.35s ease-out;
       &:hover {
-        color: var(--red);
+        color: $lightBlack;
       }
     }
   }

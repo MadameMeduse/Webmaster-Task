@@ -76,6 +76,7 @@ body {
   font-family: "Lato", sans-serif;
   font-style: normal;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -320,6 +321,7 @@ p {
 .red-section__slider,
 .contact-section__content,
 .contact-section__form {
+  padding: 5vw;
   @include respond-to("md") {
     width: 50%;
   }
@@ -329,6 +331,7 @@ p {
     line-height: 43px;
     @include respond-to("lg") {
       margin-top: 24px;
+      width: 445px;
     }
   }
 
@@ -347,5 +350,20 @@ p {
   color: $lightBlack;
   @include respond-to("lg") {
     padding-bottom: 78px;
+  }
+}
+
+//Footer
+
+.footer-section {
+  background: $lightBlack;
+  @include flexCenter();
+  flex-direction: column;
+  padding: 1vw;
+
+  img {
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 6px;
   }
 }

@@ -1,44 +1,46 @@
 @import "main.scss";
 
-.form__name {
-  display: unset !important;
-  @include respont-to("md") {
-    @include flexBetween;
-  }
-  input {
-    margin-right: 0;
-  }
-}
-
-input,
-select {
-  padding: 10px 15px;
-  border: 1px solid #333333;
-  border-radius: 6px;
-  width: 100%;
-  height: 60px;
-  background: transparent;
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(19, 39, 67, 0.5);
-
-  @include respont-to("md") {
-    margin: 23px 0;
-    padding: 20px 30px;
-
-    &:first-of-type {
-      margin-right: 23px;
+form {
+  .form__name {
+    display: unset !important;
+    @include respont-to("md") {
+      @include flexBetween;
+    }
+    input {
+      margin-right: 0;
     }
   }
-}
 
-button {
-  width: 160px;
-  height: 50px;
-  background: $linkRed;
-  border: 1.5px solid $linkRed;
-  border-radius: 6px;
-  text-transform: uppercase;
-  color: $white;
-  font-size: 14px;
+  input,
+  select {
+    padding: 10px 15px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(19, 39, 67, 0.5);
+
+    @include respont-to("md") {
+      margin: 23px 0;
+      padding: 20px 30px;
+
+      &:first-of-type {
+        margin-right: 23px;
+      }
+    }
+  }
+
+  button {
+    width: 160px;
+    height: 50px;
+    background: $linkRed;
+    border: 1.5px solid $linkRed;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 14px;
+  }
 }

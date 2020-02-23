@@ -2,7 +2,7 @@ const pageHeader = document.querySelector(".page-header");
 const openMobMenu = document.querySelector(".open-mobile-menu");
 const closeMobMenu = document.querySelector(".close-mobile-menu");
 const topMenuWrapper = document.querySelector(".top-menu-wrapper");
-const mobMenuLink = topMenuWrapper.getElementsByTagName("ul.top-menu > li");
+const mobMenuLink = topMenuWrapper.getElementsByTagName("ul.top-menu li");
 const isVisible = "is-visible";
 const showOffCanvas = "show-offcanvas";
 const noTransition = "no-transition";
@@ -33,3 +33,7 @@ function resizingComplete() {
     el.classList.remove(noTransition);
   });
 }
+
+document.getElementsByTagName("top-menu li").onclick = function() {
+  this.classList.toggle("active");
+};

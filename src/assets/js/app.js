@@ -61,12 +61,6 @@ $(".center").slick({
   arrows: false
 });
 
-$(".open-mobile-menu").click(function() {
-  $(".center1").hide();
-});
-
-$(".close-mobile-menu").click(function() {
-  $(".center1").show("slow", function() {
-    // Animation complete.
-  });
+$(".top-menu a").click(function() {
+  $(".top-menu-wrapper").removeClass("show-offcanvas");
 });

@@ -25,7 +25,6 @@ body {
   font-family: "Lato", sans-serif;
   font-style: normal;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -362,13 +361,6 @@ p {
   }
 }
 
-.red-section__content,
-.red-section__slider,
-.contact-section__content,
-.contact-section__form {
-  padding: 5vw;
-}
-
 @media (min-width: 992px) {
   .red-section__content,
   .red-section__slider,
@@ -393,7 +385,6 @@ p {
   .contact-section__content h1,
   .contact-section__form h1 {
     margin-top: 24px;
-    width: 445px;
   }
 }
 
@@ -424,30 +415,6 @@ p {
   .contact-section {
     padding-bottom: 78px;
   }
-}
-
-.footer-section {
-  background: #101010;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1vw;
-}
-
-.footer-section img {
-  width: 30%;
-  margin: 0 auto;
-  border-radius: 6px;
 }
 
 :root {
@@ -501,10 +468,6 @@ body {
   font: 1.6rem/1.5 "Lato", sans-serif;
   color: #ffffff;
   min-height: 100vh;
-}
-
-.active {
-  font-weight: bolder;
 }
 
 /* HEADER
@@ -682,10 +645,6 @@ header::after {
   font-size: 14px;
 }
 
-.page-header .top-menu a:hover {
-  color: #101010;
-}
-
 .page-header .top-menu-wrapper.show-offcanvas::before {
   background: var(--overlay);
   z-index: 1;
@@ -735,7 +694,7 @@ header::after {
 }
 
 .page-header .top-menu > li:last-child ul a:hover {
-  color: #101010;
+  color: var(--red);
 }
 
 .page-header .sub-menu {
