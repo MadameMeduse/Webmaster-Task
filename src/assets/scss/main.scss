@@ -55,6 +55,17 @@ $breakpoints: (
   }
 }
 
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 html,
 body {
   margin: 0;
@@ -166,42 +177,69 @@ a {
 
 //Main
 
-.features {
-  height: 50vh;
-  color: $lightBlack;
+#features {
   background: $lightGrey;
+  h2 {
+    padding: 63px 0;
+    color: black;
+    text-align: center;
+  }
 
-  @include respond-to("lg") {
-    height: 660px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .features {
+    color: $lightBlack;
+    padding-bottom: 10vh;
+    margin: 0 auto;
+
+    @include respond-to("lg") {
+      padding-bottom: 124px;
+      width: 90vw;
+    }
   }
 
   .feature__item {
-    width: 293px;
-    height: 198px;
-    margin: auto;
-    text-align: center;
-    padding: 32px;
-    background: $white;
-    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    h2 {
-      font-size: 18px;
+    position: relative;
+    height: 400px;
+    @include flexCenter;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 0 2vw;
+
+    @include respond-to("lg") {
+      width: 350px;
+      padding: 0;
+    }
+
+    .feature__item--image {
+      display: block;
+      height: 250px;
+      margin: 0 auto;
+    }
+    .feature__item--content {
+      position: absolute;
+      top: 44%;
+      width: 293px;
+      height: 198px;
+      margin: auto;
       text-align: center;
-      margin: 63px 0;
-    }
-    p {
-      margin-top: 20px;
-      margin-bottom: 5px;
-      font-size: 12px;
-      line-height: 150%;
-    }
-    a {
-      color: $linkRed;
-      font-weight: bold;
-      font-size: 12px;
+      padding: 32px;
+      background: $white;
+      box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      h3 {
+        font-size: 18px;
+        text-align: center;
+      }
+      p {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        line-height: 150%;
+      }
+      a {
+        color: $linkRed;
+        font-weight: bold;
+        font-size: 12px;
+      }
     }
   }
 }

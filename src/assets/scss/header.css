@@ -146,28 +146,64 @@ a:hover {
   }
 }
 
-.features {
-  height: 50vh;
-  color: #101010;
+#features {
   background: #fafafa;
 }
 
+#features h2 {
+  padding: 63px 0;
+  color: black;
+  text-align: center;
+}
+
+#features .features {
+  color: #101010;
+  padding-bottom: 10vh;
+  margin: 0 auto;
+}
+
 @media (min-width: 1200px) {
-  .features {
-    height: 660px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  #features .features {
+    padding-bottom: 124px;
+    width: 90vw;
   }
 }
 
-.features .feature__item {
+#features .feature__item {
+  position: relative;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+
+@media (min-width: 1200px) {
+  #features .feature__item {
+    width: 350px;
+    padding: 0;
+  }
+}
+
+#features .feature__item .feature__item--image {
+  display: block;
+  height: 250px;
+  margin: 0 auto;
+}
+
+#features .feature__item .feature__item--content {
+  position: absolute;
+  top: 44%;
   width: 293px;
   height: 198px;
   margin: auto;
@@ -179,20 +215,19 @@ a:hover {
   border-radius: 8px;
 }
 
-.features .feature__item h2 {
+#features .feature__item .feature__item--content h3 {
   font-size: 18px;
   text-align: center;
-  margin: 63px 0;
 }
 
-.features .feature__item p {
+#features .feature__item .feature__item--content p {
   margin-top: 20px;
   margin-bottom: 5px;
   font-size: 12px;
   line-height: 150%;
 }
 
-.features .feature__item a {
+#features .feature__item .feature__item--content a {
   color: #ed4c5c;
   font-weight: bold;
   font-size: 12px;
