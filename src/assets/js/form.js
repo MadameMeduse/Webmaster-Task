@@ -12,12 +12,18 @@ function submitForm() {
   // Name and Email validation Function
   function validationForm() {
     if (name === "" || phone === "" || surname === "") {
+      event.preventDefault();
       alert("Please fill all fields.");
       return false;
     } else if (!phone.match(phoneReg)) {
+      event.preventDefault();
       alert("Invalid phone number");
       return false;
     } else {
+      event.preventDefault();
+      alert(
+        "Your contact details was succesfully send! We will contact you as soon as possible."
+      );
       return true;
     }
   }

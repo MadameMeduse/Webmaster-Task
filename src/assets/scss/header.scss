@@ -54,7 +54,7 @@ body {
 }
 
 .active {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 /* HEADER
@@ -71,7 +71,7 @@ header {
   background-repeat: no-repeat, no-repeat;
 
   @include respond-to("lg") {
-    height: 100vh;
+    height: 782px;
   }
 
   &::after {
@@ -169,14 +169,14 @@ header {
 
   .panel1 {
     width: 100%;
-    background: $lightRed;
+    background: #ca1f44;
     transition-delay: 0.3s;
     z-index: 100;
   }
 
   .panel2 {
     width: calc(100% - 3rem);
-    background: $darkRed;
+    background: #c21d41;
     transition-delay: 0.1s;
     z-index: 100;
   }
@@ -191,9 +191,11 @@ header {
 
     a {
       font-size: 14px;
+      transition: color 0.3s ease;
 
       &:hover {
         color: $lightBlack;
+        font-weight: bolder;
       }
     }
   }
@@ -234,9 +236,10 @@ header {
       display: inline-block;
       font-size: 1.3rem;
       text-transform: uppercase;
-      transition: color 0.35s ease-out;
+      transition: color 0.5s ease-out;
       &:hover {
         color: $lightBlack;
+        font-weight: 700;
       }
     }
   }
@@ -276,6 +279,92 @@ header {
       .fab {
         font-size: 1.2rem;
       }
+    }
+  }
+}
+
+//-------- Header
+
+.header__content {
+  height: 100%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+  padding: 5vh 0;
+
+  @include respond-to("lg") {
+    height: 782px;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-weight: bold;
+    line-height: 6vmin;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    display: none;
+
+    @include respond-to("sm") {
+      display: block;
+      font-size: 50px;
+      margin-top: 2em;
+    }
+
+    @include respond-to("lg") {
+      width: 578px;
+      height: 86px;
+      font-size: 72px;
+      line-height: 86px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-top: 140px;
+      @include flexCenter();
+    }
+  }
+  p {
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    font-weight: 600;
+    margin: 29px;
+
+    @include respond-to("lg") {
+      width: 540px;
+      top: 382px;
+      font-size: 24px;
+      margin: 39px 0;
+    }
+  }
+  a {
+    margin-bottom: 4vw;
+  }
+
+  button {
+    text-align: center;
+    text-transform: uppercase;
+    width: 160px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ed4c5c;
+    &:hover {
+      background: transparent;
+      border: solid 2px $white;
+      color: $white;
+      font-weight: 700;
+    }
+
+    @include respond-to("lg") {
+      margin: 56px 0;
     }
   }
 }

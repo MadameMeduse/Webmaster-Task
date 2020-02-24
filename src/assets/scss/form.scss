@@ -17,7 +17,7 @@ form {
 
   input,
   select {
-    padding: 10px 15px;
+    padding: 10px;
     border: 1px solid #333333;
     border-radius: 6px;
     width: 100%;
@@ -26,9 +26,9 @@ form {
     font-size: 16px;
     line-height: 19px;
     color: rgba(19, 39, 67, 0.5);
-    margin: 10px 0;
+    margin-bottom: 10px;
     @include respond-to("md") {
-      margin: 23px 0;
+      margin-bottom: 23px;
       padding: 20px 30px;
 
       &:first-of-type {
@@ -47,10 +47,17 @@ form {
     color: $white;
     font-size: 14px;
     margin: 2vw auto;
+    background: 0.2s ease;
     @include flexCenter;
 
     @include respond-to("md") {
       margin: 0;
+    }
+    &:hover {
+      background: $white;
+      border: solid 2px $linkRed;
+      color: $linkRed;
+      font-weight: 700;
     }
   }
 }

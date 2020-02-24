@@ -61,7 +61,7 @@
                 </button>
               </li>
               <li>
-                <a href="#">Overview</a>
+                <a href="#" class="active">Overview</a>
               </li>
               <li>
                 <a href="#features">Features</a>
@@ -294,7 +294,7 @@
               
             </div>
            <div class="contact-section__form">
-              <form action="" method="post" id="form">
+              <form action="" id="form">
                   <div class="form__name">
                       <input
                       id="name"
@@ -324,12 +324,13 @@
                     required
                   />
                   <select id="service" name="service">
-                      <option value="volvo">Service</option>
-                      <option value="saab">Service</option>
-                      <option value="opel">Service</option>
-                      <option value="audi">Service</option>
+                    <option value="Select service" disabled>Select service</option>
+                      <option value="Service">Service</option>
+                      <option value="Service">Service</option>
+                      <option value="Service">Service</option>
+                      <option value="Service">Service</option>
                     </select>
-                  <button id="mail-submit" class="link-button">Sumbmit now</button>
+                  <button id="submitBtn">Sumbmit now</button>
                 </form>
              
            </div>
