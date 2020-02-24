@@ -44,11 +44,3 @@ $(".center").slick({
   autoplaySpeed: 1900,
   arrows: false
 });
-
-function changeOpacity() {
-  const burgerButton = document.getElementsByClassName("open-mobile-menu")[0];
-  const getSection = document.getElementsByTagName("section");
-  getSection.style = "opacity:.5";
-
-  burgerButton.addEventListener("click", changeOpacity);
-}

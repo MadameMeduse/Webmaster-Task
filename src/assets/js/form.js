@@ -5,7 +5,7 @@ function submitForm() {
   var phoneReg = /[0-9]{3}-[0-9]{3}-[0-9]{3}/;
   if (validationForm()) {
     // Calling validation function
-    document.getElementById("form").action = "success.php"; // Setting form action to "success.php" page
+    document.getElementById("form").action = "formSubmit.php"; // Setting form action to "formSubmit.php" page
     document.getElementById("form").submit(); // Submitting form
   }
 
