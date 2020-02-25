@@ -265,6 +265,7 @@ p {
 
 .contact-section {
   color: #101010;
+  z-index: 1000000;
 }
 @media (min-width: 1200px) {
   .contact-section {

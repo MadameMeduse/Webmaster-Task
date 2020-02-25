@@ -1,27 +1,26 @@
 @media screen and (max-width: 320px) {
-  .signature-logo {
-    h1 {
-      display: none;
-    }
+  .signature-logo h1 {
+    display: none;
   }
 }
-
 @media screen and (min-width: 550px) {
   .page-header .panel1 {
     width: 60%;
   }
+
   .page-header .panel2 {
     width: calc(60% - 3rem);
   }
+
   .page-header .top-menu {
     width: calc(60% - 6rem);
   }
 }
-
 @media screen and (min-width: 768px) {
   body {
     background-size: cover;
   }
+
   .page-header .top-menu {
     padding: 4rem;
   }
@@ -36,20 +35,20 @@
     line-height: 5rem;
   }
 }
-
 @media screen and (min-width: 995px) {
   .page-header .panel,
-  .page-header .open-mobile-menu,
-  .page-header .vertical-logo,
-  .page-header .top-menu .mob-block,
-  .page-header .top-menu > li:last-child,
-  .page-header .top-menu-wrapper::before {
+.page-header .open-mobile-menu,
+.page-header .vertical-logo,
+.page-header .top-menu .mob-block,
+.page-header .top-menu > li:last-child,
+.page-header .top-menu-wrapper::before {
     display: none;
   }
 
   .page-header .horizontal-logo {
     display: block !important;
   }
+
   .menu {
     display: flex;
     align-items: center;
@@ -126,7 +125,6 @@
     margin-left: 3rem;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .page-header .search {
     margin-left: 5rem;
@@ -142,3 +140,24 @@
     font-size: 1.6rem;
   }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .feature__item {
+    text-align: center;
+  }
+  .feature__item .feature__item--content {
+    z-index: 100;
+  }
+  .feature__item .feature__item--image {
+    max-width: 100%;
+    margin: 0 5px;
+  }
+
+  .footer-section a {
+    max-height: 50px;
+  }
+  .footer-section p {
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=mediaQueries.css.map */

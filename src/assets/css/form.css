@@ -265,6 +265,7 @@ p {
 
 .contact-section {
   color: #101010;
+  z-index: 1000000;
 }
 @media (min-width: 1200px) {
   .contact-section {
@@ -310,6 +311,9 @@ form .form__name {
 }
 form .form__name input {
   margin-right: 0;
+}
+form label {
+  display: none;
 }
 form input,
 form select {

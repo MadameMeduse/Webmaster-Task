@@ -285,6 +285,7 @@ p {
 
 .contact-section {
   color: $lightBlack;
+  z-index: 1000000;
   @include respond-to("lg") {
     padding-bottom: 78px;
   }

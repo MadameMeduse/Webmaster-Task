@@ -268,6 +268,7 @@ p {
 
 .contact-section {
   color: #101010;
+  z-index: 1000000;
 }
 @media (min-width: 1200px) {
   .contact-section {
@@ -432,16 +433,6 @@ header::after {
 }
 .page-header .top-menu-wrapper {
   color: #000000;
-}
-.page-header .top-menu-wrapper::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: background 0.5s;
 }
 .page-header .panel,
 .page-header .top-menu {
